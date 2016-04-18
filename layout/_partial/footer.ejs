@@ -3,7 +3,7 @@
         <%= config.title %><% if(config.subtitle) { %> —— <small><%= config.subtitle %></small><% } %>
     </div>
         <small>This Blog is powered by <a href="https://hexo.io/" target="_blank">Hexo</a>, using the <a href="https://github.com/XadillaX/hexadillax" target="_blank">Hexadillax</a> theme.</small><br />
-        <small>&copy; 2014 <%= config.author %></small>
+        <small>&copy; <%= new Date().getFullYear() %> <%= config.author %></small>
     </footer>
 
     <%- partial('google-analytics') %>
