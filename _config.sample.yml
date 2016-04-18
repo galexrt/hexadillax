@@ -1,21 +1,24 @@
 menu:
-  首页: { id: index, url: / }
-  归档: { id: archives, url: /archives }
-  标签: { id: tags, url: /tags }
-  分类: { id: categories, url: /categories }
-  关in: { id: curriculumvitae, url: /curriculumvitae }
-  链接: { id: links, url: /links }
+  Home: { id: index, url: / }
+  Archives: { id: archives, url: /archives }
+  Tags: { id: tags, url: /tags }
+  Categories: { id: categories, url: /categories }
+  Links: { id: links, url: /links }
 
-github: YOUR_GITHUB_NAME
+github: galexrt
 
 background-root: /images/background/
 background: [ 1.jpg, 2.jpg, 3.jpg ]
 
-avatar: /images/avatar.gif
+avatar: /images/avatar.png
 
 #### Comment
-duoshuo: 
-  short_name: YOUR_DUOSHUO_SHORT_NAME    ## duoshuo short name.
-                                         ## refer to http://dev.duoshuo.com/docs/501e6ce1cff715f71800000d
+duoshuo:
+  short_name: YOUR_DUOSHUO_SHORT_NAME    ## duoshuo short name. refer to http://dev.duoshuo.com/docs/501e6ce1cff715f71800000d
 
-rss: YOUR_RSS_ADDRESS                    ## if any...
+disqus_shortname:
+
+# analytics ids
+google_analytics: UA-74383279-1
+
+rss: /atom.xml
