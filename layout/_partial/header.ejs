@@ -4,7 +4,7 @@
 // Some pretreatment here... //
 //                           //
 ///////////////////////////////
-    
+
 // The title...
 var title = page.title;
 if(is_archive()) {
@@ -41,11 +41,11 @@ if(is_archive()) {
     <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
     <% } %>
     <% if(theme.favicon) { %>
-    <link rel="icon" href="<%- config.root %><%- theme.favicon %>">
+    <link rel="icon" href="<%- theme.favicon %>">
     <% } %>
     <% if(theme.apple_icon) { %>
-    <link rel="apple-touch-icon" href="<%- config.root %><%- theme.apple_icon %>">
-    <link rel="apple-touch-icon-precomposed" href="<%- config.root %><%- theme.apple_icon %>">
+    <link rel="apple-touch-icon" href="<%- theme.apple_icon %>">
+    <link rel="apple-touch-icon-precomposed" href="<%- theme.apple_icon %>">
     <% } %>
 
     <meta charset="utf-8">
@@ -62,7 +62,7 @@ if(is_archive()) {
     <script src="<%- config.root %>js/jquery.backstretch.min.js"></script>
     <script src="<%- config.root %>bootstrap/js/bootstrap.min.js"></script>
     <script src="<%- config.root %>js/headroom.min.js"></script>
-    <script src="<%- config.root %>js/jquery.headroom.min.js"></script> 
+    <script src="<%- config.root %>js/jquery.headroom.min.js"></script>
     <script src="<%- config.root %>js/common.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -92,23 +92,23 @@ if(is_archive()) {
                     <% for(var key in theme.menu) { %>
                     <li id="nav-<%- theme.menu[key]['id'] %>"><a href="<%- theme.menu[key]['url'] %>"><%= key %></a></li>
                     <% } %>
-                    
+
                     <% if(theme.github) { %><li><a href="https://github.com/<%- theme.github %>" target="_blank">GitHub</a></li><% } %>
                 </ul>
             </div>
         </div>
     </nav>
-    
+
     <script>
     var backRoot = "<%- theme['background-root'] %>";
     var backArray = [ <% for(var i = 0; i < theme.background.length; i++) { %>"<%- theme.background[i] %>", <% } %> ];
-        
+
     $(function() {
         // page-id...
         var pageId = "<%- page.path %>";
         pageId = pageId.substr(0, pageId.indexOf("/"));
         if(pageId === "") pageId = "index";
-        
+
         $("#nav-" + pageId).addClass("active");
     });
     </script>

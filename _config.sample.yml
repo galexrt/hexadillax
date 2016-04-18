@@ -3,7 +3,7 @@ menu:
   归档: { id: archives, url: /archives }
   标签: { id: tags, url: /tags }
   分类: { id: categories, url: /categories }
-  关于: { id: curriculumvitae, url: /curriculumvitae }
+  关in: { id: curriculumvitae, url: /curriculumvitae }
   链接: { id: links, url: /links }
 
 github: YOUR_GITHUB_NAME
