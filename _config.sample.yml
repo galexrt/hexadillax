@@ -3,22 +3,20 @@ menu:
   Archives: { id: archives, url: /archives }
   Tags: { id: tags, url: /tags }
   Categories: { id: categories, url: /categories }
-  Links: { id: links, url: /links }
+  Github: { id: github, url: "https://github.com/galexrt" }
+  Steam: { id: steam, url: "https://steamcommunity.com/id/galexrt" }
 
-github: galexrt
+favicon: /images/favicon.png
+avatar: /images/avatar.png
 
 background-root: /images/background/
 background: [ 1.jpg, 2.jpg, 3.jpg ]
 
-avatar: /images/avatar.png
+rss: /atom.xml
 
-#### Comment
-duoshuo:
-  short_name: YOUR_DUOSHUO_SHORT_NAME    ## duoshuo short name. refer to http://dev.duoshuo.com/docs/501e6ce1cff715f71800000d
-
+## duoshuo short name. refer to http://dev.duoshuo.com/docs/501e6ce1cff715f71800000d
+duoshuo_shortname:
 disqus_shortname:
 
-# analytics ids
+# google analytics id
 google_analytics: UA-74383279-1
-
-rss: /atom.xml
