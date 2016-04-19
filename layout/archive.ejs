@@ -18,12 +18,12 @@ if(page.archive) {
 
 <div class="container archive-body">
     <div class="row">
-        <div class="col-xs-2 well">
+        <div class="col-sm-2 well">
             <h2 class="<%= icon %>-icon"><%= title %></h2>
             <%- list_archives() %>
         </div>
 
-        <div class="col-xs-10">
+        <div class="col-sm-10">
             <% page.posts.each(function(item) { %>
             <article class="post">
                 <div class="jumbotron">

@@ -8,7 +8,7 @@ if(page.category) {
 %>
 <div class="container archive-body">
     <div class="row">
-        <div class="col-xs-3 well">
+        <div class="col-sm-3 well">
             <div class="archive-title" >
                 <h2 class="tag-icon"><%- page.category %></h2>
                 <div>
@@ -17,7 +17,7 @@ if(page.category) {
             </div>
         </div>
 
-        <div class="col-xs-9" id="category-list-body">
+        <div class="col-sm-9" id="category-list-body">
             <% page.posts.each(function(item) { %>
             <article class="post">
                 <div class="jumbotron">
@@ -53,6 +53,6 @@ if(page.category) {
         </div>
     </div>
 
-    <div class="col-xs-19 all-list-box">
+    <div class="col-sm-19 all-list-box">
     </div>
 </div>
