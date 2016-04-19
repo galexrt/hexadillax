@@ -1,12 +1,11 @@
     <footer id="footer">
-    <div id="bottom-tip">
-        <%= config.title %><% if(config.subtitle) { %> —— <small><%= config.subtitle %></small><% } %>
-    </div>
+        <div id="bottom-tip">
+            <%= config.title %><% if(config.subtitle) { %> —— <small><%= config.subtitle %></small><% } %>
+        </div>
+        <% if(config.description) { %><small><% config.description %></small><% } %>
         <small>This Blog is powered by <a href="https://hexo.io/" target="_blank">Hexo</a>, using the <a href="https://github.com/XadillaX/hexadillax" target="_blank">Hexadillax</a> theme.</small><br />
         <small>&copy; <%= new Date().getFullYear() %> <%= config.author %></small>
     </footer>
-
     <%- partial('google-analytics') %>
-    <%- partial('photoswipe', {}, {cache: true}) %>
 </body>
 </html>
