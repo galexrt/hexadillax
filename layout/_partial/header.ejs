@@ -20,10 +20,13 @@ if(is_archive()) {
     title = 'Tag: ' + page.tag;
 }
 %>
-
 <!DOCTYPE html>
 <html <% if(config.language) { %>lang="<%= config.language %>"<% } else { %>lang="zh-CN"<% } %>>
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><% if(title) { %><%= title %> | <% } %><%= config.title %><% if(config.subtitle) { %> · <%= config.subtitle %><% } %></title>
     <% if(config.author) { %>
     <meta name="author" content="<%= config.author %>"><% } %>
     <% if(page.description) { %>
@@ -47,11 +50,6 @@ if(is_archive()) {
     <link rel="apple-touch-icon" href="<%- theme.apple_icon %>">
     <link rel="apple-touch-icon-precomposed" href="<%- theme.apple_icon %>">
     <% } %>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><% if(title) { %><%= title %> | <% } %><%= config.title %><% if(config.subtitle) { %> · <%= config.subtitle %><% } %></title>
 
     <!-- Bootstrap -->
     <%- css('bootstrap/css/bootstrap.min') %>
@@ -95,17 +93,14 @@ if(is_archive()) {
             </div>
         </div>
     </nav>
-
     <script>
     var backRoot = "<%- theme['background-root'] %>";
     var backArray = [ <% for(var i = 0; i < theme.background.length; i++) { %>"<%- theme.background[i] %>", <% } %> ];
-
     $(function() {
         // page-id...
         var pageId = "<%- page.path %>";
         pageId = pageId.substr(0, pageId.indexOf("/"));
         if(pageId === "") pageId = "index";
-
         $("#nav-" + pageId).addClass("active");
     });
     </script>
