@@ -1,9 +1,6 @@
-<% if (theme.duoshuo_shortname) { %>
-  <%- css('http://static.duoshuo.com/styles/embed.default.css?349d9313.css') %>
-  <!-- 多说评论框 start -->
+<% if (theme.duoshuo_shortname && (typeof page.comments === 'undefined' || page.comments)) { %>
+  <%- css('https://static.duoshuo.com/styles/embed.default.css?349d9313.css') %>
   <div class="ds-thread" data-thread-key="<%= post.path %>" data-title="<%= post.title %>" data-url="<%= url_for(post.path) %>"></div>
-  <!-- 多说评论框 end -->
-  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
   <script type="text/javascript">
     var duoshuoQuery = {
       short_name: "<%= theme.duoshuo_shortname %>"
@@ -19,5 +16,4 @@
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
     })();
   </script>
-  <!-- 多说公共JS代码 end -->
 <% } %>
