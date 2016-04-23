@@ -1,5 +1,7 @@
+<% if (typeof page.comments === 'undefined' || page.comments) {%>
 <hr>
 <section class="comment">
 <%- partial('_partial/disqus') %>
 <%- partial('_partial/duoshuo') %>
 </section>
+<% } %>
