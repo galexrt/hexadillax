@@ -12,7 +12,7 @@ if(page.tag) {
             <div class="archive-title" >
                 <h2 class="tag-icon"><%- page.tag %></h2>
                 <div>
-                    <a href="<%- config.root %> Tags">Tags</a>
+                    <a href="<%- config.root %>tags"><< Back to all Tags</a>
                 </div>
             </div>
         </div>
@@ -21,7 +21,6 @@ if(page.tag) {
             <article class="post">
                 <div class="jumbotron">
                     <h1><a href="<%- config.root %><%- item.path %>" title="<%- item.title %>"><%- item.title %></a></h1>
-
                     <% if(item.description){ %>
                         <p><%- item.description %></p>
                     <% } else if(item.excerpt){ %>
@@ -29,7 +28,6 @@ if(page.tag) {
                     <% } else {%>
                         <p><%= strip_html(item.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140) %></p>
                     <% } %>
-
                     <p class="say-title">
                         —— <img src="<%- theme.avatar %>" class="img-circle index-post-avatar" />
                         <a href="<%- theme.author_link %>" title="<%- config.author %>"><%- config.author %></a>
