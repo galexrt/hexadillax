@@ -2,7 +2,7 @@
     <div class="well post-body first-post last-post">
         <h1><%- page.title %></h1>
         <div class="time-info">
-            Published:<time datetime="<%= date_xml(page.date) %>" itemprop="datePublished"><%= page.date.format(config.date_format) %></time>，<% if (page.updated!=null) { %>Updated:<time datetime="<%= date_xml(page.updated) %>" itemprop="dateModified"><%= page.updated.format(config.date_format) %></time>，<% } %>By <a href="<%= config.url %>" title="<%= config.author %>"><%= config.author %></a>
+            Published:<time datetime="<%= date_xml(page.date) %>" itemprop="datePublished"><%= page.date.format(config.date_format) %></time>，<% if (page.updated!=null) { %>Updated:<time datetime="<%= date_xml(page.updated) %>" itemprop="dateModified"><%= page.updated.format(config.date_format) %></time>，<% } %>By <a href="<%= theme.author_link %>" title="<%= config.author %>"><%= config.author %></a>
         </div>
         <div class="post-body-inner">
             <% if (typeof page.toc !== 'undefined' && page.toc) { %>
