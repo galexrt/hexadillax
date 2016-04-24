@@ -16,13 +16,11 @@ if(page.category) {
                 </div>
             </div>
         </div>
-
         <div class="col-sm-9" id="category-list-body">
             <% page.posts.each(function(item) { %>
             <article class="post">
                 <div class="jumbotron">
                     <h1><a href="<%- config.root %><%- item.path %>" title="<%- item.title %>"><%- item.title %></a></h1>
-
                     <% if(item.description){ %>
                         <p><%- item.description %></p>
                     <% } else if(item.excerpt){ %>
@@ -39,7 +37,6 @@ if(page.category) {
                 </div>
             </article>
             <% }); %>
-
             <% if (page.total > 1){ %>
             <div class="pagination-div">
                 <div class="well">

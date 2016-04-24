@@ -1,10 +1,4 @@
 <%
-///////////////////////////////
-//                           //
-// Some pretreatment here... //
-//                           //
-///////////////////////////////
-
 // The title...
 var title = page.title;
 if(is_archive()) {
@@ -39,7 +33,6 @@ if(is_archive()) {
     <meta name="description" content="<%= strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150) %>">
     <% } %>
     <% if(page.keywords) { %><meta name="keywords" content="<%= page.keywords %>"><% } %>
-
     <% if(theme.rss) { %>
     <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
     <% } %>
@@ -50,18 +43,15 @@ if(is_archive()) {
     <link rel="apple-touch-icon" href="<%- theme.apple_icon %>">
     <link rel="apple-touch-icon-precomposed" href="<%- theme.apple_icon %>">
     <% } %>
-
     <!-- Bootstrap -->
     <%- css('bootstrap/css/bootstrap.min') %>
     <%- css('css/style') %>
-
     <!-- Javascript -->
     <script src="<%- config.root %>js/jquery-2.1.0.min.js"></script>
     <script src="<%- config.root %>js/jquery.backstretch.min.js"></script>
     <script src="<%- config.root %>bootstrap/js/bootstrap.min.js"></script>
     <script src="<%- config.root %>js/headroom.min.js"></script>
     <script src="<%- config.root %>js/common.js"></script>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -81,7 +71,6 @@ if(is_archive()) {
                 </button>
                 <a class="navbar-brand" href="<%= config.url %>" title="<%- config.title %>"><%= config.title %></a>
             </div>
-
             <div role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
                 <% if(config.subtitle) { %><p class="navbar-text pull-right"><%= config.subtitle %></p><% } %>
                 <ul class="nav navbar-nav">

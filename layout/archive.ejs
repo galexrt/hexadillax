@@ -15,14 +15,12 @@ if(page.archive) {
     else title = "Archives";
 }
 %>
-
 <div class="container archive-body">
     <div class="row">
         <div class="col-sm-3 well">
             <h2 class="<%= icon %>-icon"><%= title %></h2>
             <%- list_archives() %>
         </div>
-
         <div class="col-sm-9">
             <% page.posts.each(function(item) { %>
             <article class="post">
@@ -58,7 +56,6 @@ if(page.archive) {
         </div>
     </div>
 </div>
-
 <script>
 $(function() {
     $(".archive-list-count").addClass("badge");

@@ -43,5 +43,3 @@ Register your own [duoshuo](http://dev.duoshuo.com/docs/501e6ce1cff715f71800000d
 ### 单篇文章开启 Mathjax
 
 向 `_config.yml` 文章源码文件头部添加 `mathjax: true`
-
-
