@@ -4,7 +4,7 @@ function random(max) {
 $(function() {
     var idx = random(backArray.length - 1);
     $.backstretch(backRoot + backArray[idx]);
-    //console.log("/images/background/" + backArray[idx]);
+    console.log("Background: " + backRoot + backArray[idx]);
     $("nav[role=banner]").headroom({
         offset  : 10,
         onNotTop: function() {
