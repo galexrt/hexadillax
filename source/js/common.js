@@ -9,15 +9,19 @@ $(function() {
         offset  : 10,
         onNotTop: function() {
             $("nav[role=banner]").stop().animate({ top: "-50px" });
+            $("footer").stop().animate({ bottom: "-100px" });
         },
         onTop   : function() {
             $("nav[role=banner]").stop().animate({ top: "0" });
+            $("footer").stop().animate({ bottom: "0" });
         },
         onPin   : function() {
             $("nav[role=banner]").stop().animate({ top: "0" });
+            $("footer").stop().animate({ bottom: "0" });
         },
         onUnpin : function() {
             $("nav[role=banner]").stop().animate({ top: "-50px" });
+            $("footer").stop().animate({ bottom: "-100px" });
         }
     });
     $(".post-body p").each(function() {
