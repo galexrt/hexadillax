@@ -4,7 +4,7 @@
         </div>
         <% if(config.description) { %><small><%= config.description %></small><br /><% } %>
         <small>This Blog is powered by <a href="https://hexo.io/" target="_blank">Hexo</a>, using the <a href="https://github.com/XadillaX/hexadillax" target="_blank">Hexadillax</a> theme.</small><br />
-        <small>&copy; <%= new Date().getFullYear() %> <%= config.author %></small>
+        <small>&copy; <%= new Date().getFullYear() %> <%= config.author %></small><% if(theme.privacy_policy != null) {%> - <a href="<%= theme.privacy_policy %>">Privacy Policy</a><% } %>
     </footer>
     <%- partial('google-analytics') %>
     <%- partial('baidu-analytics') %>
