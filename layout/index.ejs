@@ -14,7 +14,7 @@
             <a href="<%- theme.author_link %>" title="<%- config.author %>"><%- config.author %></a>
             Posted: <%- item.date.format(config.date_format) %>
             <br>
-            <% if(item.tags && item.tags.length){ %>Tags: <%- list_tags(item.tags, { show_count: false, class: 'article-tag', style: ""}) %> — <% } %><% if(item.categories && item.categories.length){ %>Categories: <%- list_tags(item.categories, { show_count: false, class: 'article-tag', style: ""}) %> <% } %>
+            <% if(item.tags && item.tags.length){ %>Tags: <%- list_tags(item.tags, { show_count: false, class: 'article-tag', style: ""}) %> — <% } %><% if(item.categories && item.categories.length){ %>Category: <%- list_tags(item.categories, { show_count: false, class: 'article-tag', style: ""}) %> <% } %>
         </p>
     </div>
 </article>

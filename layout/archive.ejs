@@ -40,7 +40,7 @@ if(page.archive) {
                         <a href="<%- theme.author_link %>" title="<%- config.author %>"><%- config.author %></a>
                         Posted: <%- item.date.format(config.date_format) %>
                         <br>
-                        Tags: <% if(item.tags && item.tags.length){ %><%- list_tags(item.tags, { show_count: false, class: 'article-tag', style: ""}) %> <% } %> — Categories: <% if(item.categories && item.categories.length){ %><%- list_tags(item.categories, { show_count: false, class: 'article-tag', style: ""}) %> <% } %>
+                        Tags: <% if(item.tags && item.tags.length){ %><%- list_tags(item.tags, { show_count: false, class: 'article-tag', style: ""}) %> <% } %> — Category: <% if(item.categories && item.categories.length){ %><%- list_tags(item.categories, { show_count: false, class: 'article-tag', style: ""}) %> <% } %>
                     </p>
                 </div>
             </article>
