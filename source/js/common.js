@@ -31,3 +31,11 @@ $(function() {
     });
     $(".post-body img").addClass("img-thumbnail img-responsive");
 });
+$(document).ready(function(){
+    $('figure.highlight').each(function(i, item) {
+        var block = $(item).find('.code pre')[0];
+        console.log($(item).attr('class').split(' ')[1]);
+        $(block).addClass($(item).attr('class').split(' ')[1]);
+        hljs.highlightBlock(block);
+    });
+});
