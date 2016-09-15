@@ -31,12 +31,3 @@ $(function() {
     });
     $(".post-body img").addClass("img-thumbnail img-responsive");
 });
-$(document).ready(function(){
-    if (typeof hljs !== 'undefined') {
-        $('figure.highlight').each(function(i, item) {
-            var block = $(item).find('.code pre')[0];
-            $(block).addClass($(item).attr('class').split(' ')[1]);
-            hljs.highlightBlock(block);
-        });
-    }
-});
