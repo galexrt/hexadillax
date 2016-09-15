@@ -17,9 +17,50 @@ if(page.archive) {
 %>
 <div class="container archive-body">
     <div class="row">
-        <div class="col-sm-3 well">
-            <h2 class="<%= icon %>-icon"><%= title %></h2>
-            <%- list_archives() %>
+        <div class="col-sm-3<% if (theme.gce_code === undefined) { %> well<% }%>">
+<% if (theme.gce_code !== undefined && theme.gce_code) { %>
+            <div class="row">
+                <div class="col-sm-12 gce-fix well well-sm">
+                        <script>
+                        (function() {
+                            var cx = '<%- theme.gce_code %>';
+                            var gcse = document.createElement('script');
+                            gcse.type = 'text/javascript';
+                            gcse.async = true;
+                            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                            var s = document.getElementsByTagName('script')[0];
+                            s.parentNode.insertBefore(gcse, s);
+                        })();
+                        </script>
+                        <gcse:search></gcse:search>
+                        <style>
+                        .row div.gce-fix {
+                            opacity: 1;
+                        }
+                        input.gsc-input {
+                            font: initial;
+                            font-family: initial;
+                            line-height: initial;
+                        }
+                        input.gsc-search-button {
+                            webkit-box-sizing: content-box;
+                            box-sizing: content-box;
+                        }
+                        .gsib_a {
+                            padding: 0 8px;
+                        }
+                        </style>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 well">
+<% } %>
+                    <h2 class="<%= icon %>-icon"><%= title %></h2>
+                    <%- list_archives() %>
+<% if (theme.gce_code !== undefined && theme.gce_code) { %>
+                </div>
+            </div>
+<% } %>
         </div>
         <div class="col-sm-9">
             <% page.posts.each(function(item) { %>

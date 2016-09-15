@@ -1,5 +1,5 @@
-<% if (theme.gce_code !== undefined && theme.gce_code !== '') { %>
-<div class="post container first-post">
+<% if (theme.gce_code !== undefined && theme.gce_code) { %>
+<div class="post container first-post gce-fix">
     <div class="well well-sm">
         <script>
         (function() {
@@ -14,7 +14,7 @@
         </script>
         <gcse:search></gcse:search>
         <style>
-        .first-post {
+        .gce-fix {
             opacity: 1;
         }
         input.gsc-input {
