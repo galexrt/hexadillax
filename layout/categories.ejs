@@ -3,16 +3,18 @@ page.category = ' ';
 %>
 <div class="container archive-body">
     <div class="row">
-        <div class="col-sm-3 well">
-            <div class="category-title" >
-                <h2 class="category-icon">Categories</h2>
-                <%
-                var shownCategories = [];
-                site.categories.sort('name').each(function(item){ %>
-                    <% if (item.length) { %>
-                    <a data-src="<%- config.root %><%- item.path %>" href="#<%= item.name %>" title="<%= item.name %>"><%= item.name %><sup><%= item.posts.length %></sup></a>
-                    <% }
-                }); %>
+        <div class="col-sm-3">
+            <div class="well">
+                <div class="category-title" >
+                    <h2 class="category-icon">Categories</h2>
+                    <%
+                    var shownCategories = [];
+                    site.categories.sort('name').each(function(item){ %>
+                        <% if (item.length) { %>
+                            <a data-src="<%- config.root %><%- item.path %>" href="#<%= item.name %>" title="<%= item.name %>"><%= item.name %><sup><%= item.posts.length %></sup></a>
+                            <% }
+                        }); %>
+                    </div>
             </div>
         </div>
         <div class="all-list-box">
