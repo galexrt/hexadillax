@@ -9,7 +9,7 @@ menu:
 favicon: /images/favicon.png
 avatar: /images/avatar.png
 
-background-root: /images/background/
+background_root: /images/background/
 background: [ 1.jpg, 2.jpg, 3.jpg ]
 
 rss: /atom.xml
